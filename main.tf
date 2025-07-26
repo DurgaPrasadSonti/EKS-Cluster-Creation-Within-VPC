@@ -20,7 +20,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "git::https://github.com/DurgaPrasadSonti/EKS-Cluster-Within-VPC.git//modules/VPC"
+  source = "https://github.com/DurgaPrasadSonti/EKS-Cluster-Creation-Within-VPC.git//modules/VPC"
 
   vpc_cidr             = var.vpc_cidr
   availability_zones   = var.availability_zones
@@ -30,7 +30,7 @@ module "vpc" {
 }
 
 module "eks" {
-  source = "git::https://github.com/DurgaPrasadSonti/EKS-Cluster-Within-VPC.git//modules/eks"
+  source = "https://github.com/DurgaPrasadSonti/EKS-Cluster-Creation-Within-VPC.git//modules/eks"
 
   cluster_name    = var.cluster_name
   cluster_version = var.cluster_version
